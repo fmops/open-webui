@@ -313,6 +313,9 @@ jobs:
 
   merge-main-images:
     runs-on: arc-runner-set
+    permissions:
+      contents: read
+      packages: write
     needs: [build-main-image]
     steps:
       # GitHub Packages requires the entire repository name to be in lowercase
@@ -367,6 +370,9 @@ jobs:
 
   merge-cuda-images:
     runs-on: arc-runner-set
+    permissions:
+      contents: read
+      packages: write
     needs: [build-cuda-image]
     steps:
       # GitHub Packages requires the entire repository name to be in lowercase
@@ -423,6 +429,9 @@ jobs:
 
   merge-ollama-images:
     runs-on: arc-runner-set
+    permissions:
+      contents: read
+      packages: write
     needs: [build-ollama-image]
     steps:
       # GitHub Packages requires the entire repository name to be in lowercase
