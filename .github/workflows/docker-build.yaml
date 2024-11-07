@@ -9,7 +9,10 @@ on:
       - custom_name_envvar
     tags:
       - v*
-  pull_request:
+
+permissions:
+  contents: write
+  packages: write
 
 env:
   REGISTRY: ghcr.io
